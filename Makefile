@@ -16,3 +16,6 @@ start: build start-localstack deploy log
 
 list-lambdas:
 	awslocal lambda list-functions
+
+invoke-lambda:
+	awslocal lambda invoke --function-name my-lambda  outputfile.txt	
