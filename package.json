@@ -1,0 +1,15 @@
+{
+  "name": "lokal-stack-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc && cd dist && zip -rq ../index.zip *"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.8.3"
+  }
+}

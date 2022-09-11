@@ -1,0 +1,22 @@
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+  FuctionName:
+    Type: String
+    Default: "test-lambda"
+
+Globals:
+  Function:
+    Runtime: nodejs14.x
+    Timeout: 60
+    MemorySize: 512
+    Environment:
+      Variables:
+        TEST: test
+Resources:
+  MyLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "my-lambda"
+      CodeUri: ./index.zip
+      Handler: index.handler
